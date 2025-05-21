@@ -1,0 +1,236 @@
+services:
+  btc:
+    container_name: btc
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./swarm/mm001/conf:/home/hummingbot/conf
+      - ./swarm/mm001/conf/connectors:/home/hummingbot/conf/connectors
+      - ./swarm/mm001/conf/strategies:/home/hummingbot/conf/strategies
+      - ./swarm/mm001/conf/controllers:/home/hummingbot/conf/controllers
+      - ./swarm/mm001/conf/scripts:/home/hummingbot/conf/scripts
+      - ./swarm/mm001/logs:/home/hummingbot/logs
+      - ./swarm/mm001/data:/home/hummingbot/data
+      - ./swarm/mm001/certs:/home/hummingbot/certs
+      - ./swarm/mm001/scripts:/home/hummingbot/scripts
+      - ./swarm/mm001/controllers:/home/hummingbot/controllers
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    tty: true
+    stdin_open: true
+    network_mode: host
+  eth:
+    container_name: eth
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./swarm/mm002/conf:/home/hummingbot/conf
+      - ./swarm/mm002/conf/connectors:/home/hummingbot/conf/connectors
+      - ./swarm/mm002/conf/strategies:/home/hummingbot/conf/strategies
+      - ./swarm/mm002/conf/controllers:/home/hummingbot/conf/controllers
+      - ./swarm/mm002/conf/scripts:/home/hummingbot/conf/scripts
+      - ./swarm/mm002/logs:/home/hummingbot/logs
+      - ./swarm/mm002/data:/home/hummingbot/data
+      - ./swarm/mm002/certs:/home/hummingbot/certs
+      - ./swarm/mm002/scripts:/home/hummingbot/scripts
+      - ./swarm/mm002/controllers:/home/hummingbot/controllers
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    tty: true
+    stdin_open: true
+    network_mode: host
+  sol:
+    container_name: sol
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./swarm/mm003/conf:/home/hummingbot/conf
+      - ./swarm/mm003/conf/connectors:/home/hummingbot/conf/connectors
+      - ./swarm/mm003/conf/strategies:/home/hummingbot/conf/strategies
+      - ./swarm/mm003/conf/controllers:/home/hummingbot/conf/controllers
+      - ./swarm/mm003/conf/scripts:/home/hummingbot/conf/scripts
+      - ./swarm/mm003/logs:/home/hummingbot/logs
+      - ./swarm/mm003/data:/home/hummingbot/data
+      - ./swarm/mm003/certs:/home/hummingbot/certs
+      - ./swarm/mm003/scripts:/home/hummingbot/scripts
+      - ./swarm/mm003/controllers:/home/hummingbot/controllers
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    tty: true
+    stdin_open: true
+    network_mode: host
+  avax:
+    container_name: avax
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./swarm/mm004/conf:/home/hummingbot/conf
+      - ./swarm/mm004/conf/connectors:/home/hummingbot/conf/connectors
+      - ./swarm/mm004/conf/strategies:/home/hummingbot/conf/strategies
+      - ./swarm/mm004/conf/controllers:/home/hummingbot/conf/controllers
+      - ./swarm/mm004/conf/scripts:/home/hummingbot/conf/scripts
+      - ./swarm/mm004/logs:/home/hummingbot/logs
+      - ./swarm/mm004/data:/home/hummingbot/data
+      - ./swarm/mm004/certs:/home/hummingbot/certs
+      - ./swarm/mm004/scripts:/home/hummingbot/scripts
+      - ./swarm/mm004/controllers:/home/hummingbot/controllers
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    tty: true
+    stdin_open: true
+    network_mode: host
+  xrp:
+    container_name: xrp
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./swarm/mm005/conf:/home/hummingbot/conf
+      - ./swarm/mm005/conf/connectors:/home/hummingbot/conf/connectors
+      - ./swarm/mm005/conf/strategies:/home/hummingbot/conf/strategies
+      - ./swarm/mm005/conf/controllers:/home/hummingbot/conf/controllers
+      - ./swarm/mm005/conf/scripts:/home/hummingbot/conf/scripts
+      - ./swarm/mm005/logs:/home/hummingbot/logs
+      - ./swarm/mm005/data:/home/hummingbot/data
+      - ./swarm/mm005/certs:/home/hummingbot/certs
+      - ./swarm/mm005/scripts:/home/hummingbot/scripts
+      - ./swarm/mm005/controllers:/home/hummingbot/controllers
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    tty: true
+    stdin_open: true
+    network_mode: host
+  bnb:
+    container_name: bnb
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./swarm/mm006/conf:/home/hummingbot/conf
+      - ./swarm/mm006/conf/connectors:/home/hummingbot/conf/connectors
+      - ./swarm/mm006/conf/strategies:/home/hummingbot/conf/strategies
+      - ./swarm/mm006/conf/controllers:/home/hummingbot/conf/controllers
+      - ./swarm/mm006/conf/scripts:/home/hummingbot/conf/scripts
+      - ./swarm/mm006/logs:/home/hummingbot/logs
+      - ./swarm/mm006/data:/home/hummingbot/data
+      - ./swarm/mm006/certs:/home/hummingbot/certs
+      - ./swarm/mm006/scripts:/home/hummingbot/scripts
+      - ./swarm/mm006/controllers:/home/hummingbot/controllers
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    tty: true
+    stdin_open: true
+    network_mode: host
+  ada:
+    container_name: ada
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./swarm/mm007/conf:/home/hummingbot/conf
+      - ./swarm/mm007/conf/connectors:/home/hummingbot/conf/connectors
+      - ./swarm/mm007/conf/strategies:/home/hummingbot/conf/strategies
+      - ./swarm/mm007/conf/controllers:/home/hummingbot/conf/controllers
+      - ./swarm/mm007/conf/scripts:/home/hummingbot/conf/scripts
+      - ./swarm/mm007/logs:/home/hummingbot/logs
+      - ./swarm/mm007/data:/home/hummingbot/data
+      - ./swarm/mm007/certs:/home/hummingbot/certs
+      - ./swarm/mm007/scripts:/home/hummingbot/scripts
+      - ./swarm/mm007/controllers:/home/hummingbot/controllers
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    tty: true
+    stdin_open: true
+    network_mode: host
+  link:
+    container_name: link
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./swarm/mm008/conf:/home/hummingbot/conf
+      - ./swarm/mm008/conf/connectors:/home/hummingbot/conf/connectors
+      - ./swarm/mm008/conf/strategies:/home/hummingbot/conf/strategies
+      - ./swarm/mm008/conf/controllers:/home/hummingbot/conf/controllers
+      - ./swarm/mm008/conf/scripts:/home/hummingbot/conf/scripts
+      - ./swarm/mm008/logs:/home/hummingbot/logs
+      - ./swarm/mm008/data:/home/hummingbot/data
+      - ./swarm/mm008/certs:/home/hummingbot/certs
+      - ./swarm/mm008/scripts:/home/hummingbot/scripts
+      - ./swarm/mm008/controllers:/home/hummingbot/controllers
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    tty: true
+    stdin_open: true
+    network_mode: host
+  trx:
+    container_name: trx
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./swarm/mm009/conf:/home/hummingbot/conf
+      - ./swarm/mm009/conf/connectors:/home/hummingbot/conf/connectors
+      - ./swarm/mm009/conf/strategies:/home/hummingbot/conf/strategies
+      - ./swarm/mm009/conf/controllers:/home/hummingbot/conf/controllers
+      - ./swarm/mm009/conf/scripts:/home/hummingbot/conf/scripts
+      - ./swarm/mm009/logs:/home/hummingbot/logs
+      - ./swarm/mm009/data:/home/hummingbot/data
+      - ./swarm/mm009/certs:/home/hummingbot/certs
+      - ./swarm/mm009/scripts:/home/hummingbot/scripts
+      - ./swarm/mm009/controllers:/home/hummingbot/controllers
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    tty: true
+    stdin_open: true
+    network_mode: host
+#    environment:
+#      - CONFIG_PASSWORD=a
+#      - CONFIG_FILE_NAME=v2_with_controllers.py
+#      - SCRIPT_CONFIG=conf_v2_with_controllers.yml
+
+  # gateway:
+  #  restart: always
+  #  container_name: gateway
+  #  image: hummingbot/gateway:latest
+  #  ports:
+  #    - "15888:15888"
+  #    - "8080:8080"
+  #  volumes:
+  #    - "./gateway_files/conf:/home/gateway/conf"
+  #    - "./gateway_files/logs:/home/gateway/logs"
+  #    - "./gateway_files/db:/home/gateway/db"
+  #    - "./certs:/home/gateway/certs"
+  #  environment:
+  #    - GATEWAY_PASSPHRASE=a

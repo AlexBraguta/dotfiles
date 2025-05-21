@@ -1,0 +1,58 @@
+format = """
+[ ](#a3aed2)\
+[ 󰣇 ](bg:#a3aed2 fg:#090c0c)\
+[](bg:#769ff0 fg:#a3aed2)\
+[ system@tiq ](fg:#e3e5e5 bg:#769ff0)\
+[](fg:#769ff0 bg:#394260)\
+$directory\
+[](fg:#394260 bg:#313244)\
+$git_branch\
+$git_status\
+[](fg:#313244 bg:#212736)\
+$python\
+$java\
+[](fg:#212736 bg:#1d2230)\
+$time\
+[ ](fg:#1d2230)\
+$character"""
+
+#[](fg:#212736 bg:#212736)\
+
+[directory]
+#style = "fg:#e3e5e5 bg:#769ff0"
+style = "fg:#769ff0 bg:#394260"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:#313244"
+format = '[[ $symbol $branch ](fg:#89b4fa bg:#313244)]($style)'
+
+[git_status]
+style = "bg:#313244"
+format = '[[($all_status$ahead_behind)](fg:#89b4fa bg:#313244)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol (\(#$virtualenv\)) ](fg:#769ff0 bg:#212736)]($style)'
+
+[java]
+symbol = "󰬷"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[ $time ](fg:#a0a9cb bg:#1d2230)]($style)'
