@@ -1,0 +1,64 @@
+2025/05/23 22:00:37 CRASH:
+--------------------------------------------------------------------------------
+<class 'KeyboardInterrupt'>	 
+
+--------------------------------------------------------------------------------
+  File "/usr/lib/python3.13/site-packages/meteo_qt/meteo_qt.py", line 1866, in update_city_gif
+    def update_city_gif(self):
+    
+2025/05/23 22:00:41 CRASH:
+--------------------------------------------------------------------------------
+<class 'KeyboardInterrupt'>	 
+
+--------------------------------------------------------------------------------
+  File "/usr/lib/python3.13/site-packages/meteo_qt/meteo_qt.py", line 1866, in update_city_gif
+    def update_city_gif(self):
+    
+2025/05/23 22:00:42 CRASH:
+--------------------------------------------------------------------------------
+<class 'KeyboardInterrupt'>	 
+
+--------------------------------------------------------------------------------
+  File "/usr/lib/python3.13/site-packages/meteo_qt/meteo_qt.py", line 1866, in update_city_gif
+    def update_city_gif(self):
+    
+2025/05/23 22:00:42 CRASH:
+--------------------------------------------------------------------------------
+<class 'KeyboardInterrupt'>	 
+
+--------------------------------------------------------------------------------
+  File "/usr/lib/python3.13/site-packages/meteo_qt/meteo_qt.py", line 1866, in update_city_gif
+    def update_city_gif(self):
+    
+2025/05/23 22:00:43 CRASH:
+--------------------------------------------------------------------------------
+<class 'KeyboardInterrupt'>	 
+
+--------------------------------------------------------------------------------
+  File "/usr/lib/python3.13/site-packages/meteo_qt/meteo_qt.py", line 1866, in update_city_gif
+    def update_city_gif(self):
+    
+2025/05/23 22:00:44 CRASH:
+--------------------------------------------------------------------------------
+<class 'KeyboardInterrupt'>	 
+
+--------------------------------------------------------------------------------
+  File "/usr/lib/python3.13/site-packages/meteo_qt/meteo_qt.py", line 1866, in update_city_gif
+    def update_city_gif(self):
+    
+2025/05/23 22:00:44 CRASH:
+--------------------------------------------------------------------------------
+<class 'KeyboardInterrupt'>	 
+
+--------------------------------------------------------------------------------
+  File "/usr/lib/python3.13/site-packages/meteo_qt/meteo_qt.py", line 1866, in update_city_gif
+    def update_city_gif(self):
+    
+2025/05/23 22:00:44 CRASH:
+--------------------------------------------------------------------------------
+<class 'KeyboardInterrupt'>	 
+
+--------------------------------------------------------------------------------
+  File "/usr/lib/python3.13/site-packages/meteo_qt/meteo_qt.py", line 1866, in update_city_gif
+    def update_city_gif(self):
+    

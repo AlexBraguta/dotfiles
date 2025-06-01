@@ -1,0 +1,12 @@
+[global]
+font = Ubuntu Nerd Font 11
+frame_color = "#cba6f7"
+background = "#303446"
+foreground = "#cdd6f4"
+separator_color = frame
+padding = 8
+horizontal_padding = 10
+frame_width = 2
+corner_radius = 10
+timeout = 5
+transparency = 30

@@ -1,0 +1,14 @@
+background-color=#1e1e2e33
+text-color=#4c4f69
+border-color=#8839ef
+border-size=1
+padding=20,20,20,20
+font=Ubuntu Nerd Font 12
+width=400
+border-radius=10
+anchor=top-right
+default-timeout=5000
+ignore-timeout=1
+group-by=app-name,urgency
+icons=1
+actions=1
