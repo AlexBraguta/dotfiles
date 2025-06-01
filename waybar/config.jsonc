@@ -8,6 +8,7 @@
     "height": 39,
     "modules-left": [
 	"custom/arch",
+	"custom/diskd",
 	"custom/memory",
 	"custom/temperature",
         "custom/weather",
@@ -18,6 +19,7 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
+	"custom/darkman",
         "pulseaudio",
         "pulseaudio#microphone",
         "bluetooth",
@@ -25,29 +27,32 @@
 	"custom/ip",
 	"clock"
     ],
+
     "hyprland/workspaces": {
         "format": "{icon}",
-	"all-outputs": true,
-	"disable-scroll": true,
-        "persistent_workspaces": {
-            "1": ["DP-3"],
-            "2": ["DP-3"],
-            "3": ["DP-3"],
-            "4": ["DP-3"],
-            "5": ["DP-3"],
-            "6": ["DP-3"],
+        "format-icons": {
+            "active": "󰣇",
+            "default": "",
+	    "empty": ""
+        },
+        "persistent-workspaces": {
+            "*": [ 1,2,3,4,5 ]
         },
 	"on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "format-icons": {
-            "default": "",
-            "active": "󰣇"
-        },
+	"on-scroll-down": "hyprctl dispatch workspace e-1"
     },
 
     "custom/arch": {
         "tooltip": false,
         "format": " 󰣇 ",
+	"on-click": "~/.config/rofi/power.sh"
+    },
+
+
+    "custom/diskd": {
+        "tooltip": false,
+        "format": " 󰋊 ",
+	"on-click": "thunar /mnt/diskD/"
     },
 
     "custom/memory": {
@@ -72,13 +77,6 @@
         "return-type": "json"
     },
 
-    "custom/pnl": {
-        "tooltip": false,
-        "format": " PnL {} ",
-        "interval": 600,
-        "exec": "/home/system/Projects/Python/Environments/waybar-env/bin/python /home/system/Projects/Python/pnl-widget/arch.py"
-    },
-
     "hyprland/language": {
 	"format-en": "en",
 	"format-ro": "ro",
@@ -88,29 +86,32 @@
 	"on-click": "hyprctl switchxkblayout dell-kb216-wired-keyboard next"
     },
 
-    "custom/ip": {
-	"format": "{}",
-	"interval": 10,
-	"exec": "curl -s https://ipinfo.io/ip",
-	"return-type": "plain",
-	"tooltip": false
+    "custom/pnl": {
+        "tooltip": false,
+        "format": " PnL {} ",
+        "interval": 600,
+        "exec": "/home/system/Projects/Python/Environments/waybar-env/bin/python /home/system/Projects/Python/pnl-widget/arch.py"
     },
 
     "tray": {
         "icon-size": 18,
         "spacing": 10
     },
-
-    "clock": {
-	"format": " {:%H:%M  %a, %b %e}",
-	"tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
-	  },
+    
+    "custom/darkman": {
+	"format": "{}",
+	"exec": "~/.config/waybar/scripts/darkman.sh",
+	"interval": 2,
+	"return-type": "json",
+	"tooltip": false,
+	"on-click": "darkman toggle"
+    },
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "tooltip": false,
         "format-muted": " Muted",
-        "on-click": "pamixer -t",
+        "on-click": "exec pavucontrol",
         "on-scroll-up": "pamixer -i 5",
         "on-scroll-down": "pamixer -d 5",
         "scroll-step": 100,
@@ -128,6 +129,7 @@
             ]
         }
     },
+
     "pulseaudio#microphone": {
         "format": "{format_source}",
         "format-source": " {volume}%",
@@ -137,6 +139,17 @@
         "on-scroll-down": "pamixer --default-source -d 5",
         "scroll-step": 5
     },
+
+    "bluetooth": {
+        "format": " {status}",
+	"on-click": "blueman-manager",
+        "format-disabled": "󰂲 off", // an empty format will hide the module
+        "format-connected": " {num_connections}",
+        "tooltip-format": "{device_alias}",
+        "tooltip-format-connected": " {device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}"
+    },
+
     "network": {
 	"format": "{ifname} {signalStrength}%",
         "format-wifi": "  {signalStrength}%",
@@ -146,13 +159,18 @@
 	"return-type": "plain",
 	"tooltip": false
     },
-    "bluetooth": {
-        "format": " {status}",
-	"on-click": "blueman-manager",
-        "format-disabled": "", // an empty format will hide the module
-        "format-connected": " {num_connections}",
-        "tooltip-format": "{device_alias}",
-        "tooltip-format-connected": " {device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}"
-    } 
+
+    "custom/ip": {
+	"format": "{}",
+	"interval": 10,
+	"exec": "curl -s https://ipinfo.io/ip",
+	"return-type": "plain",
+	"tooltip": false
+    },
+
+    "clock": {
+	"format": " {:%H:%M  %a, %b %e}",
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    }
+
 }
