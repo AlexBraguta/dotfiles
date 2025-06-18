@@ -8,10 +8,10 @@ ICON_LIGHT="" # nf-fa-sun_o
 STATE=$(darkman get 2>/dev/null)
 
 if [[ "$STATE" == "dark" ]]; then
-    ICON="$ICON_DARK"
+    ICON="$ICON_LIGHT"
     LABEL="Dark"
 elif [[ "$STATE" == "light" ]]; then
-    ICON="$ICON_LIGHT"
+    ICON="$ICON_DARK"
     LABEL="Light"
 else
     ICON="" # nf-fa-exclamation_triangle

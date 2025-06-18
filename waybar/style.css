@@ -84,6 +84,7 @@ tooltip {
 }
 
 #custom-arch {
+    color: #ffffff;
     border-radius: 10px;
     padding-left: 10px;
     margin-left: 10px;
@@ -156,7 +157,7 @@ tooltip {
 }
 
 #custom-darkman {
-    color: #eba0ac;
+    color: #e5c890;
     border-radius: 10px 10px 10px 10px;
     margin-right: 10px;
 }
