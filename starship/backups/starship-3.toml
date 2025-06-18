@@ -1,16 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](mantle)\
+[](#202060)\
 $os\
-[](bg:base fg:mantle)\
+[](bg:#7287fd fg:#202060)\
 $username\
-[](bg:surface0 fg:base)\
+[](bg:blue fg:#7287fd)\
 $directory\
-[](bg:surface1 fg:surface0)\
+[](bg:mauve fg:blue)\
 $git_branch\
 $git_status\
-[](bg:surface2 fg:surface1)\
+[](fg:mauve bg:lavender)\
 $c\
 $rust\
 $golang\
@@ -20,11 +20,11 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:surface2 bg:overlay0)\
+[](fg:lavender bg:teal)\
 $conda\
-[](fg:overlay0 bg:overlay1)\
+[](fg:teal bg:subtext0)\
 $time\
-[ ](fg:overlay1)\
+[ ](fg:subtext0)\
 $cmd_duration\
 $line_break\
 $character"""
@@ -33,37 +33,37 @@ palette = 'catppuccin_mocha'
 
 [os]
 disabled = false
-style = "bg:mantle fg:sapphire"
+style = "bg:#202060 fg:#eff1f5"
 
 [os.symbols]
-Windows = " "
-Ubuntu = "󰕈 "
-SUSE = " "
-Raspbian = "󰐿 "
-Mint = "󰣭 "
-Macos = "󰀵 "
-Manjaro = " "
-Linux = "󰌽 "
-Gentoo = "󰣨 "
-Fedora = "󰣛 "
-Alpine = " "
-Amazon = " "
-Android = " "
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
 Arch = " " 
-Artix = "󰣇 "
-CentOS = " "
-Debian = "󰣚 "
-Redhat = "󱄛 "
-RedHatEnterprise = "󱄛 "
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:base fg:lavender"
-style_root = "bg:base fg:lavender"
+style_user = "bg:#7287fd fg:#eff1f5"
+style_root = "bg:#7287fd fg:#eff1f5"
 format = '[ $user@tiq ]($style)'
 
 [directory]
-style = "bg:surface0 fg:maroon"
+style = "bg:blue fg:crust"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -78,11 +78,11 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = " "
 style = "bg:mauve"
-format = '[[ $symbol$branch ](fg:peach bg:surface1)]($style)'
+format = '[[ $symbol$branch ](fg:crust bg:mauve)]($style)'
 
 [git_status]
 style = "bg:yellow"
-format = '[[($all_status$ahead_behind )](fg:peach bg:surface1)]($style)'
+format = '[[($all_status$ahead_behind )](fg:crust bg:mauve)]($style)'
 
 [nodejs]
 symbol = " "
@@ -127,7 +127,7 @@ format = '[[ $symbol( $version) ](fg:crust bg:lavender)]($style)'
 [python]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol(\(#$virtualenv\)) ](fg:blue bg:surface2)]($style)'
+format = '[[ $symbol(\(#$virtualenv\)) ](fg:crust bg:lavender)]($style)'
 
 [docker_context]
 symbol = " "
@@ -144,7 +144,7 @@ ignore_base = false
 disabled = false
 time_format = "%R"
 style = "bg:subtext0"
-format = '[[   $time ](fg:text bg:overlay1)]($style)'
+format = '[[   $time ](fg:crust bg:subtext0)]($style)'
 
 [line_break]
 disabled = false
