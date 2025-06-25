@@ -1,16 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](mantle)\
+[](overlay1)\
 $os\
-[](bg:base fg:mantle)\
+[](bg:overlay0 fg:overlay1)\
 $username\
-[](bg:surface0 fg:base)\
+[](bg:surface2 fg:overlay0)\
 $directory\
-[](bg:surface1 fg:surface0)\
+[](bg:surface1 fg:surface2)\
 $git_branch\
 $git_status\
-[](bg:surface2 fg:surface1)\
+[](bg:surface0 fg:surface1)\
 $c\
 $rust\
 $golang\
@@ -20,20 +20,20 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:surface2 bg:overlay0)\
+[](fg:surface0 bg:crust)\
 $conda\
-[](fg:overlay0 bg:overlay1)\
+[](fg:crust bg:mantle)\
 $time\
-[ ](fg:overlay1)\
+[ ](fg:mantle)\
 $cmd_duration\
 $line_break\
 $character"""
 
-palette = 'catppuccin_mocha'
+palette = 'catppuccin_latte'
 
 [os]
 disabled = false
-style = "bg:mantle fg:sapphire"
+style = "bg:overlay1 fg:#74c7ec"
 
 [os.symbols]
 Windows = " "
@@ -58,12 +58,12 @@ RedHatEnterprise = "󱄛 "
 
 [username]
 show_always = true
-style_user = "bg:base fg:lavender"
-style_root = "bg:base fg:lavender"
+style_user = "bg:overlay0 fg:base"
+style_root = "bg:overlay0 fg:base"
 format = '[ $user@tiq ]($style)'
 
 [directory]
-style = "bg:surface0 fg:maroon"
+style = "bg:surface2 fg:maroon"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -77,11 +77,11 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = " "
-style = "bg:mauve"
+style = "bg:surface1"
 format = '[[ $symbol$branch ](fg:peach bg:surface1)]($style)'
 
 [git_status]
-style = "bg:yellow"
+style = "bg:surface1"
 format = '[[($all_status$ahead_behind )](fg:peach bg:surface1)]($style)'
 
 [nodejs]
@@ -127,7 +127,7 @@ format = '[[ $symbol( $version) ](fg:blue bg:surface2)]($style)'
 [python]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol(#$virtualenv) ](fg:blue bg:surface2)]($style)'
+format = '[[ $symbol(#$virtualenv) ](fg:blue bg:surface0)]($style)'
 
 [docker_context]
 symbol = " "
@@ -143,8 +143,8 @@ ignore_base = false
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:subtext0"
-format = '[[ $time](fg:text bg:overlay1)]($style)'
+style = "bg:mantle"
+format = '[[ $time](fg:text bg:mantle)]($style)'
 # 
 
 [line_break]

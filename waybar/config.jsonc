@@ -73,7 +73,7 @@
         "tooltip": true,
         "format": " Chișinău {} ",
         "interval": 600,
-        "exec": "/home/system/Projects/Python/Environments/waybar-env/bin/python ~/.config/waybar/scripts/waybar-wttr.py",
+        "exec": "/mnt/diskD/Projects/Python/Environments/waybar-env/bin/python ~/.config/waybar/scripts/waybar-wttr.py",
         "return-type": "json"
     },
 
@@ -90,7 +90,7 @@
         "tooltip": false,
         "format": " PnL {} ",
         "interval": 600,
-        "exec": "/home/system/Projects/Python/Environments/waybar-env/bin/python /home/system/Projects/Python/pnl-widget/arch.py"
+        "exec": "/mnt/diskD/Projects/Python/Environments/waybar-env/bin/python /mnt/diskD/Projects/Python/pnl-widget/arch.py"
     },
 
     "tray": {

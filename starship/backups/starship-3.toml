@@ -1,16 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](#202060)\
+[](mantle)\
 $os\
-[](bg:#7287fd fg:#202060)\
+[](bg:base fg:mantle)\
 $username\
-[](bg:blue fg:#7287fd)\
+[](bg:surface0 fg:base)\
 $directory\
-[](bg:mauve fg:blue)\
+[](bg:surface1 fg:surface0)\
 $git_branch\
 $git_status\
-[](fg:mauve bg:lavender)\
+[](bg:surface2 fg:surface1)\
 $c\
 $rust\
 $golang\
@@ -20,11 +20,11 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:lavender bg:teal)\
+[](fg:surface2 bg:overlay0)\
 $conda\
-[](fg:teal bg:subtext0)\
+[](fg:overlay0 bg:overlay1)\
 $time\
-[ ](fg:subtext0)\
+[ ](fg:overlay1)\
 $cmd_duration\
 $line_break\
 $character"""
@@ -33,37 +33,37 @@ palette = 'catppuccin_mocha'
 
 [os]
 disabled = false
-style = "bg:#202060 fg:#eff1f5"
+style = "bg:mantle fg:sapphire"
 
 [os.symbols]
-Windows = ""
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = "󰀵"
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
+Windows = " "
+Ubuntu = "󰕈 "
+SUSE = " "
+Raspbian = "󰐿 "
+Mint = "󰣭 "
+Macos = "󰀵 "
+Manjaro = " "
+Linux = "󰌽 "
+Gentoo = "󰣨 "
+Fedora = "󰣛 "
+Alpine = " "
+Amazon = " "
+Android = " "
 Arch = " " 
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
+Artix = "󰣇 "
+CentOS = " "
+Debian = "󰣚 "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
 
 [username]
 show_always = true
-style_user = "bg:#7287fd fg:#eff1f5"
-style_root = "bg:#7287fd fg:#eff1f5"
+style_user = "bg:base fg:lavender"
+style_root = "bg:base fg:lavender"
 format = '[ $user@tiq ]($style)'
 
 [directory]
-style = "bg:blue fg:crust"
+style = "bg:surface0 fg:maroon"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -78,61 +78,61 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = " "
 style = "bg:mauve"
-format = '[[ $symbol$branch ](fg:crust bg:mauve)]($style)'
+format = '[[ $symbol$branch ](fg:peach bg:surface1)]($style)'
 
 [git_status]
 style = "bg:yellow"
-format = '[[($all_status$ahead_behind )](fg:crust bg:mauve)]($style)'
+format = '[[($all_status$ahead_behind)](fg:peach bg:surface1)]($style)'
 
 [nodejs]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol( $version) ](fg:blue bg:surface2)]($style)'
 
 [c]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol( $version) ](fg:blue bg:surface2)]($style)'
 
 [rust]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol( $version) ](fg:blue bg:surface2)]($style)'
 
 [golang]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol( $version) ](fg:blue bg:surface2)]($style)'
 
 [php]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol( $version) ](fg:blue bg:surface2)]($style)'
 
 [java]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol( $version) ](fg:blue bg:surface2)]($style)'
 
 [kotlin]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol( $version) ](fg:blue bg:surface2)]($style)'
 
 [haskell]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol( $version) ](fg:blue bg:surface2)]($style)'
 
 [python]
 symbol = " "
 style = "bg:green"
-format = '[[ $symbol(\(#$virtualenv\)) ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol(#$virtualenv) ](fg:blue bg:surface2)]($style)'
 
 [docker_context]
 symbol = " "
 style = "bg:sapphire"
-format = '[[ $symbol( $context) ](fg:crust bg:subtext1)]($style)'
+format = '[[ $symbol( $context) ](fg:blue bg:surface2)]($style)'
 
 [conda]
 symbol = "  "
@@ -144,7 +144,8 @@ ignore_base = false
 disabled = false
 time_format = "%R"
 style = "bg:subtext0"
-format = '[[   $time ](fg:crust bg:subtext0)]($style)'
+format = '[[ $time](fg:text bg:overlay1)]($style)'
+# 
 
 [line_break]
 disabled = false
