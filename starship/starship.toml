@@ -21,7 +21,7 @@ $kotlin\
 $haskell\
 $python\
 [](fg:surface2 bg:overlay0)\
-$conda\
+$custom\
 [](fg:overlay0 bg:overlay1)\
 $time\
 [ ](fg:overlay1)\
@@ -133,6 +133,12 @@ format = '[[ $symbol(#$virtualenv) ](fg:blue bg:surface2)]($style)'
 symbol = " "
 style = "bg:sapphire"
 format = '[[ $symbol( $context) ](fg:blue bg:surface2)]($style)'
+
+[custom.docker]
+detect_files   = ["Dockerfile","docker-compose.yml","docker-compose.yaml","compose.yml","compose.yaml"]
+symbol = " "
+#style = "fg:sapphire bg:overlay0"
+format = "[[ $symbol ](fg:sapphire bg:overlay0)]($style)"
 
 [conda]
 symbol = "  "
