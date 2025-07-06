@@ -10,7 +10,7 @@ configuration {
     display-window: "Windows:";
 }
 
-@theme "catppuccin"
+@theme "catppuccin-latte"
 
 * {
     font: "Ubuntu Nerd Font 14";
@@ -31,7 +31,7 @@ window {
 
     border: 1px;
     border-color: @bg3;
-    background-color:   rgba(48, 52, 70, 0.9);
+    background-color:   rgba(204, 208, 218, 0.9);
 }
 
 mainbox {

@@ -20,7 +20,8 @@
     ],
     "modules-right": [
 	"custom/darkman",
-        "pulseaudio",
+	"custom/matrix",
+	"pulseaudio",
         "pulseaudio#microphone",
         "bluetooth",
         "network",
@@ -107,6 +108,12 @@
 	"on-click": "darkman toggle"
     },
 
+    "custom/matrix": {
+	"format": "󰘨 ",
+	"on-click": "mpv --fullscreen --video-aspect-override=21:9 --loop-file=inf --input-terminal=no --really-quiet /home/system/Videos/matrix.mp4",
+	"tooltip": false
+    },
+
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "tooltip": false,
@@ -153,12 +160,13 @@
     "network": {
 	"format": "{ifname} {signalStrength}%",
         "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "󰈀",
+        "format-ethernet": "󰈀 ",
 	"interval": 3600,
 	"exec": "curl -s https://ipinfo.io/ip",
 	"return-type": "plain",
 	"tooltip": false
     },
+
 
     "custom/ip": {
 	"format": "{}",

@@ -64,6 +64,7 @@ tooltip {
 #custom-wallpaper,
 #custom-ip,
 #custom-darkman,
+#custom-matrix,
 #language,
 #clock,
 #battery,
@@ -158,6 +159,12 @@ tooltip {
 
 #custom-darkman {
     color: #e5c890;
+    border-radius: 10px 10px 10px 10px;
+    margin-right: 10px;
+}
+
+#custom-matrix {
+    color: #a6e3a1;
     border-radius: 10px 10px 10px 10px;
     margin-right: 10px;
 }

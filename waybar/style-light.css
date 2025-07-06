@@ -64,6 +64,7 @@ tooltip {
 #custom-wallpaper,
 #custom-ip,
 #custom-darkman,
+#custom-matrix,
 #language,
 #clock,
 #battery,
@@ -164,6 +165,14 @@ tooltip {
     border-radius: 10px 10px 10px 10px;
     margin-right: 10px;
 }
+
+#custom-matrix {
+    color: #40a02b;
+    border-radius: 10px 10px 10px 10px;
+    margin-right: 10px;
+}
+
+
 
 #pulseaudio {
     color: #1e66f5;
