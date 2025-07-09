@@ -55,11 +55,11 @@ alias env-waybar='source /mnt/diskD/Projects/Python/Environments/waybar-env/bin/
 
 alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
 
-export API_KEY="cGQ4eYrpoHK2BwOaKdjnJyQEItMm962B1CuwnkM7sU4GADMgfZxO3bgCpn3Xn29c"
-export API_SECRET="XkErBDO6iJpwEXUY02wAjj2ZETIbdmgP6s7SNYUIlYDSjXYoGEMlDvFK50WCN76c"
+export API_KEY=""
+export API_SECRET=""
 
-export TG_TOKEN="7427411871:AAGREPEQSC2us4Ca4zlwoJERLp5DopE-U9M"
-export MY_CHAT_ID="967437417"
+export TG_TOKEN=""
+export MY_CHAT_ID=""
 
 set -x PYTHONPYCACHEPREFIX /tmp/pycache/
 export PYTHONDONTWRITEBYTECODE=1
