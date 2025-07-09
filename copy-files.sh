@@ -16,4 +16,5 @@ cp -r ~/.config/starship.toml /mnt/diskD/Projects/dotfiles/starship/starship.tom
 cp -r /usr/share/dark-mode.d/* /mnt/diskD/Projects/dotfiles/usr/share/dark-mode.d/
 cp -r /usr/share/light-mode.d/* /mnt/diskD/Projects/dotfiles/usr/share/light-mode.d/
 cp -r ~/.config/waybar/* /mnt/diskD/Projects/dotfiles/waybar/
+cp -r ~/.config/fish/* /mnt/diskD/Projects/dotfiles/fish/
 echo "Dotfiles backup complete."
